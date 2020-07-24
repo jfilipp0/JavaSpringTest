@@ -1,1 +1,59 @@
-<p>registration-form works!</p>
+<app-menu></app-menu>
+
+<div class="container col-lg-6">
+    <h1 class="text-center">Registration</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group">
+          <!-- <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div> -->
+          
+          <div class="form-group">
+            <label for="username">username: </label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter Username"
+              name="username">
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+              name="password">
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">Rewrite Password:</label>
+            <input type="repassword" class="form-control" [(ngModel)]="repassword" id="repassword" placeholder="Write your password again"
+              name="repassword">
+          </div>
+
+          <div class="form-group">
+            <label for="fullname">fullname: </label>
+            <input type="text" class="form-control" id="fullname" [(ngModel)]="fullname" placeholder="Enter fullname"
+              name="fullname">
+          </div>
+
+          <div class="form-group">
+            <label for="birthday">Birthday Date: </label>
+            <input class="form-control" type="birthday" [(ngModel)]="birthday" placeholder="Enter Birthday" 
+            id="birthday">
+          </div>
+
+          <div class="form-group">
+            <label for="nationality">nationality: </label>
+            <input type="text" class="form-control" id="nationality" [(ngModel)]="nationality" placeholder="Enter nationality"
+              name="nationality">
+          </div>
+
+          <div class="form-group">
+            <label for="cpf">CPF: </label>
+            <input type="text" class="form-control" id="cpf" [(ngModel)]="cpf" placeholder="Enter cpf"
+              name="cpf">
+          </div>
+
+          <button (click)=handleRegister() class="btn btn-success">Register</button>
+          <br/>
+          <br/>
+          <button (click)=handleToLogin() class="btn btn-info">back to login</button>
+        </form>
+      </div>
+    </div>
+  </div>

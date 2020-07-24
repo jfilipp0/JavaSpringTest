@@ -27,6 +27,10 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	private BigInteger id;
+	@NotBlank(message = "Username is required")
+    private String username;
+    @NotBlank(message = "Password is required")
+    private String password;
 	@NotBlank(message = "Name is mandatory")
 	private String fullName;
 	private String gender;
