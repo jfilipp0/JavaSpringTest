@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jfilippo.user.register.dto.AuthenticationResponse;
 import com.jfilippo.user.register.dto.LoginRequest;
 import com.jfilippo.user.register.dto.RegisterRequest;
 import com.jfilippo.user.register.model.AuthenticationBean;
@@ -36,8 +37,8 @@ public class BasicAuthController {
 	}
 	
 	@PostMapping("/login")
-	public void login(@RequestBody LoginRequest loginRequest) {
-		authService.login(loginRequest);
+	public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+		return authService.login(loginRequest);
 	}
 	
 }
